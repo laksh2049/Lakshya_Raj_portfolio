@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail } from "lucide-react";
+import lakshyaPhoto from "@/assets/lakshya-photo.png";
+import lakshyaCV from "@/assets/Lakshya_Raj_CV.pdf";
 
 /**
  * Tech-Forward Minimalism Design with Dark Skills Section
@@ -164,14 +166,24 @@ export default function Home() {
                   Building end-to-end AI systems with expertise in backend engineering, data infrastructure, and product strategy. Passionate about scalable architectures, ML pipelines, and shipping features that matter. Currently at IIT Kharagpur.
                 </p>
                 
-                {/* CTA Button */}
-                <div className="pt-4">
+                {/* CTA Buttons */}
+                <div className="pt-4 flex flex-wrap gap-6 items-center">
                   <button
                     onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
                     className="text-white font-bold text-lg border-b-2 border-white hover:border-blue-400 hover:text-blue-400 transition-all duration-300 pb-2"
                   >
                     View My Work
                   </button>
+                  <a
+                    href={lakshyaCV}
+                    download="Lakshya_Raj_CV.pdf"
+                    className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 text-sm"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                    Download CV
+                  </a>
                 </div>
               </div>
             </div>
@@ -181,7 +193,7 @@ export default function Home() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-xl shadow-2xl">
                   <img
-                    src="/manus-storage/lakshya-bw_4238d671.jpg"
+                    src={lakshyaPhoto}
                     alt="Lakshya Raj"
                     className="w-full max-w-md h-auto object-cover transition-all duration-500 group-hover:scale-105"
                   />
